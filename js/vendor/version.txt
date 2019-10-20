@@ -1,0 +1,2 @@
+bootstrap.min.js 	= v3.3.1
+jquery-3.1.1.min.js = v3.1.1

@@ -1,0 +1,72 @@
+RewriteEngine On
+
+
+# News
+RewriteRule ^site/list_news/page/([0-9]+) ?view=list_news&page=$1 [NC,L] # News+Pages
+RewriteRule ^site/list_news/news/([0-9]+) ?view=list_news&id=$1 [NC,L] # News+ID
+RewriteRule ^site/list_news ?view=list_news [NC,L] #Page: News
+RewriteRule ^site/news/news/([0-9]+) ?view=news&id=$1 [NC,L] #Page: News
+
+# Article
+RewriteRule ^site/list_article/filter/([0-9a-zA-Z_-]+)/page/([0-9]+) ?view=list_article&filter=$1&page=$2 [NC,L] # ARTICLE+FILTER+PAGES
+RewriteRule ^site/list_article/filter/([0-9a-zA-Z_-]+) ?view=list_article&filter=$1 [NC,L]
+RewriteRule ^site/list_articles/article/([0-9]+) ?view=list_articles&id=$1 [NC,L] # Article+ID
+
+# Market-Radar
+RewriteRule ^site/list_market_radar ?view=list_market_radar [NC,L]
+RewriteRule ^site/list_market/page/([0-9]+) ?view=list_market&page=$1 [NC,L] # Markets+Pages
+RewriteRule ^site/list_market ?view=list_market [NC,L] # Markets
+
+RewriteRule ^site/list_produktmarket/market/([0-9]+) ?view=list_produktmarket&market=$1 [NC,L]
+
+# Profile
+RewriteRule ^site/login/list_profile ?site=login&view=list_profile [NC,L]
+
+# Login Einkaufsliste
+RewriteRule ^site/login/([0-9a-zA-Z_-]+)/action/delete/([0-9]+) ?site=login&view=$1&action=delete&id=$2 [NC,L]
+RewriteRule ^site/login/([0-9a-zA-Z_-]+)/sublist/([0-9]+)/action/delete/([0-9]+) ?site=login&view=$1&sublist=$2&action=delete&id=$3 [NC,L]
+
+
+
+
+# Shopping-List
+RewriteRule ^site/login/([0-9a-zA-Z_-]+)/sublist/([0-9]+)/article/([0-9]+) ?site=login&view=$1&sublist=$2&id=$3 [NC,L]
+RewriteRule ^site/login/([0-9a-zA-Z_-]+)/sublist/([0-9]+) ?site=login&view=$1&sublist=$2 [NC,L]
+
+
+
+# Filter-List
+RewriteRule ^site/login/([0-9a-zA-Z_-]+)/subfilter/([0-9]+)/article/([0-9]+) ?site=login&view=$1&subfilter=$2&id=$3 [NC,L]
+RewriteRule ^site/login/([0-9a-zA-Z_-]+)/subfilter/([0-9]+) ?site=login&view=$1&subfilter=$2 [NC,L]
+
+
+
+
+
+
+
+
+RewriteRule ^site/login/([0-9a-zA-Z_-]+)/page/([0-9]+) ?site=login&view=$1&page=$2[NC,L]
+
+RewriteRule ^site/login/([0-9a-zA-Z_-]+)/article/([0-9]+) ?site=login&view=$1&article=subarticle&id=$2 [NC,L]
+
+RewriteRule ^site/login/([0-9a-zA-Z_-]+)/([0-9]+) ?site=login&view=$1&id=$2 [NC,L]
+RewriteRule ^site/login/([0-9a-zA-Z_-]+) ?site=login&view=$1 [NC,L]
+
+# Login
+RewriteRule ^site/login ?view=login [NC,L]
+RewriteRule ^site/signup ?view=signup [NC,L]
+RewriteRule ^site/resetpassword ?view=resetpassword [NC,L]
+RewriteRule ^site/user_login ?view=user_login [NC,L]
+
+
+RewriteRule ^site/notfound ?view=notfound [NC,L]
+
+
+#Footer
+RewriteRule ^site/contact ?view=contact [NC,L] # contact
+RewriteRule ^site/sitemap ?view=sitemap [NC,L] # sitemap
+RewriteRule ^site/service ?view=service [NC,L] # Service
+RewriteRule ^site/privacy ?view=privacy [NC,L] # Privacy
+
+
